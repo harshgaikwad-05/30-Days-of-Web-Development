@@ -1,0 +1,77 @@
+/* ================================
+   Container Styling
+================================ */
+
+.cards {
+    border: 2px solid black;
+
+    /* 
+       display: flow-root;
+       This creates a new Block Formatting Context (BFC).
+
+       Why we use it:
+       When we float elements inside a container,
+       the container normally collapses (height becomes 0).
+       
+       flow-root prevents that collapse and makes the
+       container automatically wrap around floated elements.
+    */
+    display: flow-root;
+}
+
+
+/* ================================
+   Individual Card Styling
+================================ */
+
+.card {
+    border: 2px solid red;
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   Float Example
+================================ */
+
+img {
+    height: 45vw;
+
+    /*
+       float: left;
+
+       What float does:
+       - Moves the image to the left side of its container.
+       - Allows text or inline elements to wrap around it.
+       
+       Originally, float was created for text wrapping
+       around images (like in newspapers).
+       
+       Important:
+       When an element is floated:
+       - It is removed from the normal document flow.
+       - Other content flows around it.
+    */
+    float: left;
+
+    margin-right: 15px;
+    /* Adds spacing between image and text */
+}
+
+
+/* ================================
+   Clear Example
+================================ */
+
+/*
+   clear property stops floating behavior.
+
+   clear: both;
+   - Prevents the element from sitting next to floated elements.
+   - Forces it to move below any floated element
+     (whether floated left or right).
+*/
+
+div:nth-child(3) {
+    clear: both;
+}
