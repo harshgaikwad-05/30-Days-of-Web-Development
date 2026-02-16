@@ -1,0 +1,121 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* 1️⃣ Descendant Selector */
+/* Selects ALL elements inside .boxes */
+.boxes * {
+    color: blue;
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+
+/*
+.boxes * explanation:
+- .boxes → selects the element with class "boxes"
+- * → selects ALL elements inside it
+- This is called a descendant selector
+*/
+
+
+/* 2️⃣ nth-child */
+/* Selects every even child */
+.list li:nth-child(even) {
+    background-color: lightgreen;
+}
+
+/*
+:nth-child(n)
+- Selects elements based on position inside parent
+- even → 2, 4, 6...
+- odd → 1, 3, 5...
+- You can also use numbers like:
+  li:nth-child(3)
+*/
+
+
+/* 3️⃣ nth-child first */
+.list li:first-child {
+    background-color: orange;
+}
+
+/*
+:first-child
+- Selects the FIRST child of its parent
+*/
+
+
+/* 4️⃣ nth-child last */
+.list li:last-child {
+    background-color: pink;
+}
+
+/*
+:last-child
+- Selects the LAST child of its parent
+*/
+
+
+/* 5️⃣ ::before */
+.before-after::before {
+    content: "🔥 ";
+    color: red;
+}
+
+/*
+::before
+- Inserts content BEFORE the selected element
+- Requires "content" property
+*/
+
+
+/* 6️⃣ ::after */
+.before-after::after {
+    content: " 🚀";
+    color: green;
+}
+
+/*
+::after
+- Inserts content AFTER the selected element
+- Also requires "content"
+*/
+
+
+/* 7️⃣ ::selection */
+.selection::selection {
+    background-color: yellow;
+    color: black;
+}
+
+/*
+::selection
+- Styles the text when user highlights (selects) it
+*/
+
+
+/* 8️⃣ ::first-letter */
+.first-letter::first-letter {
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+}
+
+/*
+::first-letter
+- Styles only the first letter of a block element
+*/
+
+
+/* 9️⃣ ::placeholder */
+input::placeholder {
+    color: purple;
+    font-style: italic;
+}
+
+/*
+::placeholder
+- Styles the placeholder text inside input fields
+*/
