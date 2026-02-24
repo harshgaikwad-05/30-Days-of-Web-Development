@@ -1,0 +1,81 @@
+/* 
+=============================
+FLEX CONTAINER PROPERTIES
+=============================
+*/
+
+.flex-container {
+    display: flex;  
+    /* Makes this div a flex container */
+
+    flex-direction: row;  
+    /* row (default) → items in horizontal line
+       column → items in vertical line */
+
+    justify-content: center;  
+    /* Aligns items horizontally
+       flex-start → left
+       center → middle
+       flex-end → right
+       space-between → equal space between
+       space-around → equal space around
+       space-evenly → equal spacing everywhere */
+
+    align-items: center;  
+    /* Aligns items vertically
+       flex-start → top
+       center → middle
+       flex-end → bottom
+       stretch → fill container height */
+
+    height: 300px;  
+    /* Needed to see vertical alignment */
+
+    background-color: lightgray;
+}
+
+
+/* 
+=============================
+FLEX ITEM PROPERTIES
+=============================
+*/
+
+.box {
+    background-color: steelblue;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+
+    flex: 1;
+    /* flex: 1 means:
+       Each box takes equal space
+       It is shorthand for:
+       flex-grow: 1;
+       flex-shrink: 1;
+       flex-basis: 0%;
+    */
+}
+
+/*
+Other Flex Item Properties:
+
+flex-grow:
+    Defines how much item can grow
+    Example:
+    flex-grow: 2; (grows double compared to others)
+
+flex-shrink:
+    Defines how much item can shrink
+
+flex-basis:
+    Default size before growing/shrinking
+    Example:
+    flex-basis: 200px;
+
+align-self:
+    Override align-items for one item
+    Example:
+    align-self: flex-end;
+*/
