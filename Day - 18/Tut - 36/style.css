@@ -1,0 +1,148 @@
+/*
+    File: style.css
+    Topic: CSS Transforms Tutorial
+    Description: This file demonstrates all major CSS transform properties
+                 with proper explanations and comments.
+*/
+
+/* ================= GENERAL PAGE STYLING ================= */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+section {
+    margin: 40px 0;
+}
+
+/* ================= COMMON BOX STYLING ================= */
+
+/*
+    All demo boxes share these properties.
+    This avoids repeating the same CSS again and again.
+*/
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    border-radius: 10px;
+
+    /* 
+        transition property:
+        Makes the transform smooth instead of instant.
+        Syntax: transition: property duration timing-function;
+    */
+    transition: transform 0.5s ease;
+}
+
+/* ================= 1. TRANSLATE ================= */
+
+/*
+    translate(x, y)
+    Moves the element along X (horizontal) and Y (vertical) axis.
+*/
+
+.translate-box:hover {
+    transform: translate(50px, 20px);
+}
+
+/* ================= 2. ROTATE ================= */
+
+/*
+    rotate(angle)
+    Rotates the element in degrees (deg).
+    Positive values rotate clockwise.
+    Negative values rotate counter-clockwise.
+*/
+
+.rotate-box:hover {
+    transform: rotate(45deg);
+}
+
+/* ================= 3. SCALE ================= */
+
+/*
+    scale(x, y)
+    Scales width and height.
+    1 = original size
+    >1 = bigger
+    <1 = smaller
+*/
+
+.scale-box:hover {
+    transform: scale(1.5);
+}
+
+/* ================= 4. SKEW ================= */
+
+/*
+    skew(x-angle, y-angle)
+    Skews element along X and Y axes.
+*/
+
+.skew-box:hover {
+    transform: skew(20deg, 10deg);
+}
+
+/* ================= 5. 3D ROTATE ================= */
+
+/*
+    rotateX() rotates around horizontal axis
+    rotateY() rotates around vertical axis
+    rotateZ() rotates like normal rotate()
+*/
+
+.rotate3d-box:hover {
+    transform: rotateX(180deg);
+}
+
+/* ================= 6. MULTIPLE TRANSFORMS ================= */
+
+/*
+    You can combine multiple transforms.
+    Order matters!
+    Example below:
+    1. Scale
+    2. Rotate
+    3. Translate
+*/
+
+.multiple-box:hover {
+    transform: scale(1.2) rotate(30deg) translateX(20px);
+}
+
+/* ================= IMPORTANT NOTES ================= */
+
+/*
+    1. Transform does NOT affect document flow.
+       Other elements will NOT move.
+
+    2. Transform origin:
+       By default, transforms happen from the center.
+       You can change it using:
+
+       transform-origin: top left;
+
+    3. 3D Perspective (Advanced):
+       Add perspective to parent element:
+
+       perspective: 500px;
+
+    4. Hardware acceleration:
+       Transforms are performance-friendly
+       because they use GPU rendering.
+*/
