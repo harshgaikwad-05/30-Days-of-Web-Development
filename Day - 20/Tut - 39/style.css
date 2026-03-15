@@ -1,0 +1,158 @@
+/* =====================================
+   GENERAL PAGE STYLING
+   ===================================== */
+
+/* Style the entire page */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Section styling */
+section {
+    margin: 40px 0;
+}
+
+/* Common style for all boxes */
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: steelblue;
+}
+
+/* =====================================
+   1. BASIC ANIMATION
+   ===================================== */
+
+/*
+animation properties:
+animation-name -> name of animation
+animation-duration -> how long animation runs
+*/
+
+.basic {
+    animation-name: moveRight;
+    animation-duration: 3s;
+}
+
+/*
+@keyframes defines the animation steps
+0% = starting point
+100% = ending point
+*/
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+/* =====================================
+   2. INFINITE ANIMATION
+   ===================================== */
+
+/*
+animation-iteration-count: infinite
+makes animation run forever
+*/
+
+.infinite {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/* =====================================
+   3. ANIMATION WITH DELAY
+   ===================================== */
+
+/*
+animation-delay
+waits before starting animation
+*/
+
+.delay {
+    animation: colorChange 3s;
+    animation-delay: 2s;
+}
+
+@keyframes colorChange {
+
+    0% {
+        background-color: steelblue;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: crimson;
+    }
+
+}
+
+/* =====================================
+   4. HOVER ANIMATION
+   ===================================== */
+
+/*
+:hover triggers animation
+only when user places cursor on element
+*/
+
+.hover:hover {
+    animation: grow 0.5s forwards;
+}
+
+@keyframes grow {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+
+}
+
+/* =====================================
+   5. ROTATION ANIMATION
+   ===================================== */
+
+.rotate {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
