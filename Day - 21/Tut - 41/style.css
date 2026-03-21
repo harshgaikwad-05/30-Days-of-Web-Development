@@ -1,0 +1,50 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Box container for each image */
+.box {
+    display: inline-block;
+    margin: 20px;
+}
+
+/* Image styling */
+img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* CSS FILTERS */
+
+/* Converts image to black & white */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Gives old vintage look */
+.sepia {
+    filter: sepia(100%);
+}
+
+/* Inverts colors */
+.invert {
+    filter: invert(100%);
+}
+
+
+/* 
+| Filter            | Description               |
+| ----------------- | ------------------------- |
+| `blur(px)`        | Blurs the image           |
+| `brightness()`    | Adjusts brightness        |
+| `contrast()`      | Adjusts contrast          |
+| `grayscale()`     | Converts to black & white |
+| `sepia()`         | Vintage effect            |
+| `invert()`        | Inverts colors            |
+| `opacity()`       | Controls transparency     |
+| `saturate()`      | Controls color intensity  |
+| `hue-rotate(deg)` | Changes color tone        | 
+*/
