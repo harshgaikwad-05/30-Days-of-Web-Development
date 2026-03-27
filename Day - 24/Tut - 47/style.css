@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    background: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #ff4d00;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ff4d00;
+}
+
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 50px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    margin: 15px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #ff4d00;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+button {
+    background: #ff4d00;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #e63e00;
+}
