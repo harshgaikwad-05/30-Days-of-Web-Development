@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #0a0a0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Button */
+.cyber-btn {
+    position: relative;
+    padding: 20px 50px;
+    color: #00f7ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid #00f7ff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Glow */
+.cyber-btn:hover {
+    color: #0a0a0f;
+    background: #00f7ff;
+    box-shadow: 
+        0 0 10px #00f7ff,
+        0 0 40px #00f7ff,
+        0 0 80px #00f7ff;
+}
+
+/* Animated borders */
+.cyber-btn span {
+    position: absolute;
+    display: block;
+}
+
+/* Top */
+.cyber-btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f7ff);
+    animation: slide1 2s linear infinite;
+}
+
+@keyframes slide1 {
+    0% { left: -100%; }
+    50%,100% { left: 100%; }
+}
+
+/* Right */
+.cyber-btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #00f7ff);
+    animation: slide2 2s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes slide2 {
+    0% { top: -100%; }
+    50%,100% { top: 100%; }
+}
+
+/* Bottom */
+.cyber-btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #00f7ff);
+    animation: slide3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes slide3 {
+    0% { right: -100%; }
+    50%,100% { right: 100%; }
+}
+
+/* Left */
+.cyber-btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #00f7ff);
+    animation: slide4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes slide4 {
+    0% { bottom: -100%; }
+    50%,100% { bottom: 100%; }
+}
